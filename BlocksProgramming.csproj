@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Blocks_Programming</RootNamespace>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>ProgrammingBlocksIco.ico</ApplicationIcon>
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\delete.png" />
+    <None Remove="Resources\delete_open.png" />
+    <None Remove="Resources\ProgrammingBlocksIco.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\delete.png" />
+    <Resource Include="Resources\delete_open.png" />
+    <Resource Include="Resources\ProgrammingBlocksIco.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>

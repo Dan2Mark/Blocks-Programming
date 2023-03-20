@@ -1,0 +1,45 @@
+﻿<Window xmlns:Other="clr-namespace:Blocks_Programming.Other"  x:Class="Blocks_Programming.MainWindow" 
+        Name="wnd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Blocks_Programming"
+        mc:Ignorable="d"
+        Title="Programming Blocks" Height="600" Width="800">
+    <Grid Background="LightGray">
+        <Grid Background="#DDDDDD" HorizontalAlignment="Stretch" MinWidth="500" Margin="250,10,10,10">
+
+            <ScrollViewer Margin="5,5,5,80" >
+                <Border MinWidth="100" HorizontalAlignment="Center">
+                    <StackPanel x:Name="Main" >
+
+                    </StackPanel>
+                </Border>
+            </ScrollViewer>
+            <Image x:Name="Trash" Source="Resources/delete.png" AllowDrop="True" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5,0,0,85" Height="55" Width="55" Drop="DeleteBlock" DragEnter="EnterBlock" DragLeave="LeaveBlock">
+                <Image.Effect>
+                    <DropShadowEffect BlurRadius="5" Opacity="0.2" ShadowDepth="3"/>
+                </Image.Effect>
+            </Image>
+            <Other:StartButton VerticalAlignment="Top" HorizontalAlignment="Left" x:Name="buttStart"/>
+            <Other:CodeGeneratorButton Margin ="80 5 5 5" VerticalAlignment="Top" HorizontalAlignment="Left" x:Name="buttGetCode"/>
+            <Other:ConsoleBlock VerticalAlignment="Bottom" MinHeight="80" x:Name="console"/>
+        </Grid>
+        <Border Margin="15" Padding="15" Background="White" HorizontalAlignment="Left" CornerRadius="15" MinWidth="200" >
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="15" Opacity="0.1"/>
+            </Border.Effect>
+            <ScrollViewer>
+                <StackPanel>
+                    <TextBlock Text="Блоки: " Margin="15,5" HorizontalAlignment="Center"/>
+                    <StackPanel 
+                    x:Name="blocks"
+                    >
+
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Window>
